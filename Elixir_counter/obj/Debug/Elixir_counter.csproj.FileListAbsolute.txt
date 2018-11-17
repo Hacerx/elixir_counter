@@ -1,0 +1,10 @@
+c:\users\häcerx\source\repos\Elixir_counter\Elixir_counter\bin\Debug\Elixir_counter.exe.config
+c:\users\häcerx\source\repos\Elixir_counter\Elixir_counter\bin\Debug\Elixir_counter.exe
+c:\users\häcerx\source\repos\Elixir_counter\Elixir_counter\bin\Debug\Elixir_counter.pdb
+c:\users\häcerx\source\repos\Elixir_counter\Elixir_counter\obj\Debug\Elixir_counter.csprojAssemblyReference.cache
+c:\users\häcerx\source\repos\Elixir_counter\Elixir_counter\obj\Debug\Elixir_counter.Form1.resources
+c:\users\häcerx\source\repos\Elixir_counter\Elixir_counter\obj\Debug\Elixir_counter.Properties.Resources.resources
+c:\users\häcerx\source\repos\Elixir_counter\Elixir_counter\obj\Debug\Elixir_counter.csproj.GenerateResource.cache
+c:\users\häcerx\source\repos\Elixir_counter\Elixir_counter\obj\Debug\Elixir_counter.csproj.CoreCompileInputs.cache
+c:\users\häcerx\source\repos\Elixir_counter\Elixir_counter\obj\Debug\Elixir_counter.exe
+c:\users\häcerx\source\repos\Elixir_counter\Elixir_counter\obj\Debug\Elixir_counter.pdb
