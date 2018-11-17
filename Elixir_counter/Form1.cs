@@ -65,7 +65,7 @@ namespace Elixir_counter
             }
             if(keyData == Keys.F2)
             {
-                timer1.Enabled = false;
+                timer1.Enabled = timer2.Enabled = false;
                 minuto = 2;
                 segundo = 60;
                 por.Text = "x1";
