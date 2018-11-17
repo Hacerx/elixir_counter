@@ -46,11 +46,13 @@
             this.progressBar1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.progressBar1.ForeColor = System.Drawing.Color.Fuchsia;
             this.progressBar1.Location = new System.Drawing.Point(15, 89);
-            this.progressBar1.Maximum = 10;
+            this.progressBar1.MarqueeAnimationSpeed = 0;
             this.progressBar1.Name = "progressBar1";
+            this.progressBar1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.progressBar1.Size = new System.Drawing.Size(468, 51);
+            this.progressBar1.Step = 1;
             this.progressBar1.TabIndex = 0;
-            this.progressBar1.Value = 5;
+            this.progressBar1.Value = 50;
             this.progressBar1.Click += new System.EventHandler(this.progressBar1_Click);
             // 
             // ecounter
@@ -76,7 +78,7 @@
             // 
             // timer1
             // 
-            this.timer1.Interval = 2800;
+            this.timer1.Interval = 280;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // tiempo

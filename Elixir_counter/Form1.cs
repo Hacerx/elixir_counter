@@ -23,41 +23,41 @@ namespace Elixir_counter
 
         protected override bool ProcessCmdKey(ref System.Windows.Forms.Message msg, System.Windows.Forms.Keys keyData)
         { 
-            if (keyData == Keys.D1 || keyData == Keys.NumPad1 && progressBar1.Value >= 1 )
+            if (keyData == Keys.D1 || keyData == Keys.NumPad1 && progressBar1.Value >= 10)
             {
-                progressBar1.Value -= 1;
+                progressBar1.Value -= 10;
             }
-            if (keyData == Keys.D2 || keyData == Keys.NumPad2 && progressBar1.Value >= 2)
+            if (keyData == Keys.D2 || keyData == Keys.NumPad2 && progressBar1.Value >= 20)
             {
-                progressBar1.Value -= 2;
+                progressBar1.Value -= 20;
             }
-            if (keyData == Keys.D3 || keyData == Keys.NumPad3 && progressBar1.Value >= 3)
+            if (keyData == Keys.D3 || keyData == Keys.NumPad3 && progressBar1.Value >= 30)
             {
-                progressBar1.Value -= 3;
+                progressBar1.Value -= 30;
             }
-            if (keyData == Keys.D4 || keyData == Keys.NumPad4 && progressBar1.Value >= 4)
+            if (keyData == Keys.D4 || keyData == Keys.NumPad4 && progressBar1.Value >= 40)
             {
-                progressBar1.Value -= 4;
+                progressBar1.Value -= 40;
             }
-            if (keyData == Keys.D5 || keyData == Keys.NumPad5 && progressBar1.Value >= 5)
+            if (keyData == Keys.D5 || keyData == Keys.NumPad5 && progressBar1.Value >= 50)
             {
-                progressBar1.Value -= 5;
+                progressBar1.Value -= 50;
             }
-            if (keyData == Keys.D6 || keyData == Keys.NumPad6 && progressBar1.Value >= 6)
+            if (keyData == Keys.D6 || keyData == Keys.NumPad6 && progressBar1.Value >= 60)
             {
-                progressBar1.Value -= 6;
+                progressBar1.Value -= 60;
             }
-            if (keyData == Keys.D7 || keyData == Keys.NumPad7 && progressBar1.Value >= 7)
+            if (keyData == Keys.D7 || keyData == Keys.NumPad7 && progressBar1.Value >= 70)
             {
-                progressBar1.Value -= 7;
+                progressBar1.Value -= 70;
             }
-            if (keyData == Keys.D8 || keyData == Keys.NumPad8 && progressBar1.Value >= 8)
+            if (keyData == Keys.D8 || keyData == Keys.NumPad8 && progressBar1.Value >= 80)
             {
-                progressBar1.Value -= 8;
+                progressBar1.Value -= 80;
             }
-            if (keyData == Keys.D9 || keyData == Keys.NumPad9 && progressBar1.Value >= 9)
+            if (keyData == Keys.D9 || keyData == Keys.NumPad9 && progressBar1.Value >= 90)
             {
-                progressBar1.Value -= 9;
+                progressBar1.Value -= 90;
             }
             if(keyData == Keys.F1)
             {
@@ -73,7 +73,13 @@ namespace Elixir_counter
                 tiempo.Text = "3:00";
                 ecounter.Text = 5.ToString();
             }
-            ecounter.Text = progressBar1.Value.ToString();
+            string aux = progressBar1.Value.ToString();
+            if (aux.Length == 1){
+                ecounter.Text = "0";
+            }
+            else{
+                ecounter.Text = aux.Substring(0, aux.Length - 1);
+            }
             return true;
         }
 
@@ -94,17 +100,21 @@ namespace Elixir_counter
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            //segundo--;
+            string aux = "";
             if (minuto == 1 && segundo == 0)
             {
-                timer1.Interval = 1400;
+                timer1.Interval = 140;
                 por.Text = "x2";
             }
 
-            if (progressBar1.Value != 10)
+            if (progressBar1.Value != 100)
             {
-                progressBar1.Increment(1);
-                ecounter.Text = progressBar1.Value.ToString();
+                progressBar1.PerformStep();
+                aux = progressBar1.Value.ToString();
+                if (aux[aux.Length-1] == '0')
+                {
+                    ecounter.Text = aux.Substring(0, aux.Length-1);
+                }
             }
         }
 
